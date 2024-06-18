@@ -1,0 +1,51 @@
+---
+title: "Homework 1"
+subtitle: "STAT40830-Adv Data Prog with R"
+author: "Elise Landman (22205684)"
+date: "15 June 2024"
+format: pdf
+editor: visual
+---
+
+# Introduction
+
+This analysis explores the **relationship between penguin species** and flipper length using the *palmerpenguins* dataset which is available as part of the base R package *palmerpenguins*. The dataset contains measurements of various penguin species collected at Palmer Station, Antarctica.
+
+Below the first 6 rows of the dataset are displayed:
+
+```{r}
+#| warning: false
+#| echo: false
+
+# install.packages("palmerpenguins")
+
+# Load the necessary libraries
+library(palmerpenguins)
+head(penguins)
+```
+
+We can see that the dataset contains 8 columns.
+
+# Data and Visualization
+
+We can plot the data and visually analyze it using the R package *ggplot2*:
+
+```{r}
+#| warning: false
+#| echo: false
+
+# Load the necessary libraries
+library(ggplot2)
+
+# Create the plot
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm, fill = species)) +
+  geom_boxplot() +
+  labs(title = "Flipper Length by Penguin Species",
+       x = "Species",
+       y = "Flipper Length (mm)") +
+  theme_minimal()
+```
+
+The above graph provides insights into the differences and similarities in flipper lengths among the penguin species. It depicts three box plots, each representing the flipper length in milimeters for a specific penguin species.
+
+We can observe that Gentoo penguins have the longest median flipper length, followed by Chinstrap and Adelie penguins. We can also observe that in the dataset, only the Adalie Species contain outliers.
