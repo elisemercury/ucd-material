@@ -2,7 +2,7 @@
 title: "Homework 1"
 subtitle: "STAT40830-Advanced Data Programming with R"
 author: "Elise Landman (22205684)"
-date: "15 June 2024"
+date: "16 June 2024"
 format: pdf
 editor: visual
 ---
